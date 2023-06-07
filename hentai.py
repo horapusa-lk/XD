@@ -21,7 +21,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 Just send me the prompt as normal message""")
 
 
-async def nfsw(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def hentai(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if update.message.chat.id in sudo_list:
         x = await context.bot.get_chat_member(chat_id=-1001517984656, user_id=update.message.from_user.id)
         user = str(x.status)
@@ -46,7 +46,7 @@ https://t.me/hora_pusa_ai''')
 # Create the Application and pass it your bot's token.
 application = Application.builder().token("6213444100:AAEzkJSbzmV4n4_kx1H2ao5zd-NIVk5XYXE").build()
 application.add_handler(CommandHandler("help", help_command))
-application.add_handler(CommandHandler("nfsw", nfsw))
+application.add_handler(CommandHandler("hentai", hentai))
 
 # Run the bot until the user presses Ctrl-C
 application.run_polling()
